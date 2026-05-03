@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Championship DataHint</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">EFL Championship</p>
+        <h1>DataHint</h1>
+        <p class="sub">Statistisk hint til næste kamp: 1, X eller 2.</p>
+      </div>
+      <button id="refreshBtn" class="btn">Opdater</button>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <div>
+          <h2>Næste kamp</h2>
+          <p id="nextMatch" class="big">Indlæser...</p>
+        </div>
+        <div id="hintBadge" class="badge">?</div>
+      </div>
+      <p id="reason" class="reason">Henter data...</p>
+      <p id="updated" class="muted"></p>
+    </section>
+
+    <section class="grid">
+      <div class="card small">
+        <h3>Hjemmehold</h3>
+        <p id="homeStats">-</p>
+      </div>
+      <div class="card small">
+        <h3>Udehold</h3>
+        <p id="awayStats">-</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Seneste kampe i datasættet</h2>
+      <div id="matches" class="matches"></div>
+    </section>
+
+    <footer>
+      Data fra Football-Data.co.uk. Appen giver kun et datahint, ikke garanti.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
